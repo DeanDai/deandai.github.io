@@ -4,11 +4,18 @@
 
 # Site
 title: Dean的个人博客
-subtitle: 心水音乐与篮球的不入流程序猿
+subtitle: 心水音乐与篮球的程序猿
 description:
 author: Dean Dai
-language:
+language: zh-Hans #中文简体
+email: xiaogang1003@gmail.com
 timezone:
+
+# Disqus 
+disqus:
+  enable: true
+  disqus_shortname: deandai    #your name
+  count: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -72,11 +79,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
+## stylus:
+##   compress: true #自适应布局
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/DeanDai/deandai.github.io.git
+  repository: git@github.com:DeanDai/deandai.github.io.git
   branch: master

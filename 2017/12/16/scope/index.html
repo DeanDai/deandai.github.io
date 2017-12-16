@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="我的一个爱好是听歌，有一天闲着无聊，就想着敲点代码来丰富我的GitHub，正好最近在用Vue，就决定了写个简单的音乐播放器。  开始1. 构建项目，这里我用了vue-cli脚手架来搭建项目框架 安装： 1npm install -g vue-cli  初始化 1vue init webpack music  安装依赖 ">
+<meta name="description" content="作用域：作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为你的代码提供了一定程度的安全性。   概念  作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于Vue的音乐播放器">
-<meta property="og:url" content="http://yoursite.com/2017/08/02/music/index.html">
+<meta property="og:title" content="浅谈JS的作用域(scope)">
+<meta property="og:url" content="http://yoursite.com/2017/12/16/scope/index.html">
 <meta property="og:site_name" content="Dean的个人博客">
-<meta property="og:description" content="我的一个爱好是听歌，有一天闲着无聊，就想着敲点代码来丰富我的GitHub，正好最近在用Vue，就决定了写个简单的音乐播放器。  开始1. 构建项目，这里我用了vue-cli脚手架来搭建项目框架 安装： 1npm install -g vue-cli  初始化 1vue init webpack music  安装依赖 12cd musicnpm install  运行 1npm run dev">
+<meta property="og:description" content="作用域：作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为你的代码提供了一定程度的安全性。   概念  作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/home.png">
-<meta property="og:updated_time" content="2017-12-01T08:53:22.428Z">
+<meta property="og:updated_time" content="2017-12-16T01:17:42.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于Vue的音乐播放器">
-<meta name="twitter:description" content="我的一个爱好是听歌，有一天闲着无聊，就想着敲点代码来丰富我的GitHub，正好最近在用Vue，就决定了写个简单的音乐播放器。  开始1. 构建项目，这里我用了vue-cli脚手架来搭建项目框架 安装： 1npm install -g vue-cli  初始化 1vue init webpack music  安装依赖 12cd musicnpm install  运行 1npm run dev">
-<meta name="twitter:image" content="http://yoursite.com/images/home.png">
+<meta name="twitter:title" content="浅谈JS的作用域(scope)">
+<meta name="twitter:description" content="作用域：作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为你的代码提供了一定程度的安全性。   概念  作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/02/music/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/16/scope/"/>
 
 
 
 
 
-  <title>基于Vue的音乐播放器 | Dean的个人博客</title>
+  <title>浅谈JS的作用域(scope) | Dean的个人博客</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/02/music/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/scope/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dean Dai">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">基于Vue的音乐播放器</h1>
+          <h1 class="post-title" itemprop="name headline">浅谈JS的作用域(scope)</h1>
         
 
         <div class="post-meta">
@@ -263,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T18:15:04+10:00">
-                2017-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T12:16:09+11:00">
+                2017-12-16
               </time>
             
 
@@ -302,40 +300,31 @@
 
       
         <hr>
-<p>我的一个爱好是听歌，有一天闲着无聊，就想着敲点代码来丰富我的<a href="https://github.com/DeanDai" target="_blank" rel="noopener">GitHub</a>，正好最近在用Vue，就决定了写个简单的音乐播放器。</p>
+<p>作用域：作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为你的代码提供了一定程度的安全性。</p>
 <hr>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="1-构建项目，这里我用了vue-cli脚手架来搭建项目框架"><a href="#1-构建项目，这里我用了vue-cli脚手架来搭建项目框架" class="headerlink" title="1. 构建项目，这里我用了vue-cli脚手架来搭建项目框架"></a>1. 构建项目，这里我用了<a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">vue-cli</a>脚手架来搭建项目框架</h3><ul>
-<li><p>安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g vue-cli</div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue init webpack music</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd music</div><div class="line">npm install</div></pre></td></tr></table></figure>
-</li>
-<li><p>运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run dev</div></pre></td></tr></table></figure>
-</li>
+<ul>
+<li>概念</li>
 </ul>
-<p>浏览器打开<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>可以看到下面这个页面，说明运行成功<br><img src="../../../../images/home.png" alt=""></p>
-<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h3><ul>
-<li><p>路由功能: <a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener">vue-router</a>(这个在初始化的时候就问你是否安装，没有安装可以自己安装)</p>
-</li>
-<li><p>请求功能: <a href="https://github.com/pagekit/vue-resource" target="_blank" rel="noopener">vue-resource</a>，推荐使用<a href="https://github.com/mzabriskie/axios" target="_blank" rel="noopener">axios</a>，前者现在已经不维护了</p>
-</li>
-<li><p>UI组件库: <a href="https://github.com/museui/muse-ui" target="_blank" rel="noopener">Muse-UI</a>, 这个纯粹是最近听说了这个组件库，想了解一下用法。当然大家也可以不用，自己写UI</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save muse-ui vue-router vue-resource</div></pre></td></tr></table></figure>
-</li>
+<p>作用域指的是代码中的某些特定部分的变量、函数和对象的可访问性。换句话说，作用域决定了这些变量、函数和对象等资源的可见性。作用域在代码中无处不在，我觉得它其中的一个优点就是为你的代码提供了一定程度的安全性。</p>
+<ul>
+<li>种类</li>
 </ul>
-<p>基本上就是这些，其他插件在初始化的时候就已经添加好了依赖，只需要安装即可。</p>
-<h3 id="3-音乐接口api"><a href="#3-音乐接口api" class="headerlink" title="3. 音乐接口api"></a>3. 音乐接口api</h3><p>在网上找了很多现有的音乐播放器的API，最后选择了qq音乐的一些api来做数据源。但是大家都知道，肯定会碰到的一个问题就是跨域。</p>
-<p>好在vue-cli可以通过配置解决，就是项目中config/index.js里面有个参数叫proxyTable。</p>
-<p>具体可以参考<a href="https://vuejs-templates.github.io/webpack/proxy.html" target="_blank" rel="noopener">https://vuejs-templates.github.io/webpack/proxy.html</a></p>
-<p>接口参照<a href="https://segmentfault.com/a/1190000007685830" target="_blank" rel="noopener">https://segmentfault.com/a/1190000007685830</a>，我自己也在<a href="https://m.y.qq.com/" target="_blank" rel="noopener">QQ音乐移动端web版</a>上抓包获取了几个接口使用</p>
-<hr>
-<p>大概的内容就是这些，有兴趣的同学可以去看<a href="https://github.com/DeanDai/music" target="_blank" rel="noopener">源码</a>，写的不好，感谢您花费时间阅读这篇文章。</p>
-<p>作者 <a href="https://github.com/DeanDai" target="_blank" rel="noopener">@Dean</a><br>2017 年 08月 02日    </p>
+<p>在JS中，作用域有两类：全局作用域(Global Scope)和局部作用域(Local Scope)。如果变量被定义在一个函数内部，那它就处在一个局部作用域中；被定义在函数外部，那它就处在全局作用域中。每个函数被调用的时候都会创建一个新的作用域。</p>
+<ol>
+<li>全局作用域</li>
+</ol>
+<p>当你开始写一段JS代码的时候，你就已经处在一个全局作用域中了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// The scope is by default global</div><div class="line">var name = &apos;Dean&apos;;</div></pre></td></tr></table></figure></p>
+<p>在全局作用域下的变量可以在任何其他作用域下被访问和修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var name = &apos;Dean&apos;;</div><div class="line">console.log(name); // &apos;Dean&apos;</div><div class="line">function showName() &#123;</div><div class="line">    console.log(name); // name能被访问到</div><div class="line">&#125;</div><div class="line">showName(); // &apos;Dean&apos;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>局部作用域(函数作用域)</li>
+</ol>
+<p>在函数内定义的变量处在一个局部作用域中，并且值得注意的是，该函数的每一次调用，都会有不用的作用域。这就意味着，拥有相同名称的变量能够在不同的函数中使用。这是因为这些变量与它们各自的函数相绑定，各自都有不同的作用域，并且不能在其他函数中被访问到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 全局作用域</div><div class="line">function demoFunc() &#123;</div><div class="line">    // 局部作用域 #1</div><div class="line">    function demoOtherFunc() &#123;</div><div class="line">        // 局部作用域 #2</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 全局作用域</div><div class="line">function anotherFunc() &#123;</div><div class="line">    // 局部作用域 #3</div><div class="line">&#125;</div><div class="line">// 全局作用域</div></pre></td></tr></table></figure></p>
+<ol>
+<li>块级语句</li>
+</ol>
+<p>块级语句(例如表示条件的if和switch以及表示循环的for和while)不像其他函数一样，它不会创建新的作用域。在块级语句中定义的变量，将保留其已经存在着的作用域。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    // 这个&apos;if&apos;块级语句不会创建新的作用域</div><div class="line">    var name = &apos;Dean&apos;; // 变量name仍旧处在全局作用域中</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在ECMAScript6中引入了了关键字let和const。这些关键字可以替代var关键字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name = &apos;Dean&apos;;</div><div class="line"></div><div class="line">let like = &apos;Music&apos;;</div><div class="line">const love = &apos;Girlfriend&apos;</div></pre></td></tr></table></figure></p>
+<p>与var关键字相反，let和const支持在块级语句中定义局部作用域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">if(true) &#123;</div><div class="line">    // 这个&apos;if&apos;块级语句不会创建新的作用域</div><div class="line"></div><div class="line">    // 变量&apos;name&apos;在全局作用域中，因为关键字var</div><div class="line">    var name = &apos;Dean&apos;;</div><div class="line">    // 变量&apos;like&apos;在局部作用域中，因为关键字let</div><div class="line">    let like = &apos;Music&apos;;</div><div class="line">    // 变量love在局部作用域中，因为关键字const</div><div class="line">    let love = &apos;Girlfriend&apos;;</div><div class="line">&#125;</div><div class="line">console.log(name); // 输出&apos;Dean&apos;</div><div class="line">console.log(like); // Uncaught ReferenceError: like is not defined</div><div class="line">console.log(love); // Uncaught ReferenceError: love is not defined</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -360,14 +349,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/08/02/music/" rel="next" title="基于Vue的音乐播放器">
+                <i class="fa fa-chevron-left"></i> 基于Vue的音乐播放器
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/16/scope/" rel="prev" title="浅谈JS的作用域(scope)">
-                浅谈JS的作用域(scope) <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/21/closure/" rel="prev" title="浅谈JS的闭包(closure)">
+                浅谈JS的闭包(closure) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -420,17 +413,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -474,22 +458,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构建项目，这里我用了vue-cli脚手架来搭建项目框架"><span class="nav-number">1.1.</span> <span class="nav-text">1. 构建项目，这里我用了vue-cli脚手架来搭建项目框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装插件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-音乐接口api"><span class="nav-number">1.3.</span> <span class="nav-text">3. 音乐接口api</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

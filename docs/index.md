@@ -8,7 +8,7 @@ hero:
   tagline: Use VitePress to quickly build a personal website
   actions:
     - theme: brand
-      text: Markdown Pages
+      text: Pages
       link: /markdown-pages
     - theme: alt
       text: My Demos

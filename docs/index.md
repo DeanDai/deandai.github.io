@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Dean Dai"
   text: "My personal website"
-  tagline: My great project tagline
+  tagline: Use VitePress to quickly build a personal website
   actions:
     - theme: brand
       text: Markdown Pages

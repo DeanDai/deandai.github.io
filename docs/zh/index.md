@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Dean Dai"
   text: "我的个人网站"
-  tagline: My great project tagline
+  tagline: 使用VitePress快速搭建个人网站
   actions:
     - theme: brand
       text: Markdown 页面

@@ -4,7 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Dean Dai",
   description: "My personal website",
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/mylogo.png' }]
+  ],
   themeConfig: {
+    logo: { src: '/mylogo.png', width: 24, height: 24 }, 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

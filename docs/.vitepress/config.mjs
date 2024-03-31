@@ -5,7 +5,9 @@ export default defineConfig({
   title: "Dean Dai",
   description: "My personal website",
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/mylogo.png' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/mylogo.png' }],
+    ['meta', { property: 'og:locale', content: 'en' }],
+    ['meta', { property: 'og:title', content: 'VitePress | Vite & Vue Powered Static Site Generator' }]
   ],
   themeConfig: {
     logo: { src: '/mylogo.png', width: 24, height: 24 }, 
